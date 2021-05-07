@@ -1,0 +1,17 @@
+---
+name: link-checker
+dependencies: [base >= 4.7 && < 5, HTTP]
+library:
+  source-dirs: src
+executables:
+  link-checker-exe:
+    main: Main.hs
+    source-dirs: exe
+    ghc-options: [-threaded, -rtsopts, -with-rtsopts=-N]
+    dependencies: [link-checker, hspec, HTTP]
+tests:
+  link-checker-test:
+    main: Spec.hs
+    source-dirs: test
+    ghc-options: [-threaded, -rtsopts, -with-rtsopts=-N]
+    dependencies: [link-checker, hspec, HTTP]

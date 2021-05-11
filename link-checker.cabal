@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 5bee8b8564ef7cc1243d8f6438a83025c188d6a0b652a724cc547fa3b9534bf9
+-- hash: 91476225f2647aa6a619b636097a72947b98f8e328ea36571acfecf4f87ed33f
 
 name:           link-checker
 version:        0.0.0
@@ -20,6 +20,7 @@ library
   build-depends:
       HTTP
     , base >=4.7 && <5
+    , scalpel
   default-language: Haskell2010
 
 executable link-checker-exe
@@ -34,6 +35,8 @@ executable link-checker-exe
     , base >=4.7 && <5
     , hspec
     , link-checker
+    , scalpel
+    , text
   default-language: Haskell2010
 
 test-suite link-checker-test
@@ -49,4 +52,6 @@ test-suite link-checker-test
     , base >=4.7 && <5
     , hspec
     , link-checker
+    , scalpel
+    , text
   default-language: Haskell2010
